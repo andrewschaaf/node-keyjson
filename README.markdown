@@ -11,9 +11,10 @@ _(TODO: support <code>npm install node-keyjson</code>)_
 One option (if you're already using npm):
 
 <pre>mkdir /usr/local/lib/node/keyjson
-ln -s keyjson.js /usr/local/lib/node/keyjson/index.js
+ln -s /...keyjson.js /usr/local/lib/node/keyjson/index.js
 </pre>
 
+Note that the path to keyjson.js must be absolute.
 
 ## Using
 
