@@ -236,6 +236,9 @@ def b64decode(s):
     Padding is not optional
     '''
     
+    if isinstance(s, Buffer):
+        s = s.toString('utf-8')
+    
     octets = []
     numChars = len(s)
     
