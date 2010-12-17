@@ -1,30 +1,49 @@
 ## What is keyjson?
 
-See [http://keyjson.org](http://keyjson.org)
+It's awesome. See [keyjson.org](http://keyjson.org)
 
 ## Installing
 
-_(TODO: support <code>npm install node-keyjson</code>)_
-
-<code>keyjson.js</code> is self-contained and you can install it however you like.
-
-One option (if you're already using npm):
-
-<pre>mkdir /usr/local/lib/node/keyjson
-ln -s /...keyjson.js /usr/local/lib/node/keyjson/index.js
+<pre>
+npm install keyjson
 </pre>
 
-Note that the path to keyjson.js must be absolute.
+## Usage / API
 
-## Using
+*"Software using Semantic Versioning MUST declare a public API. [...]<br>However it is done, it should be precise and comprehensive."*
 
-<pre>keyjson = require('keyjson');
-buf = keyjson.stringify(['enwiki', 'Hacker News', 1729000]);
-keyjson.parse(buf);
+The following plus [keyjson.org](http://keyjson.org) should be precise and comprehensive enough:
+
+<pre>
+keyjson = require('keyjson');
 </pre>
 
+#### {stringify,parse}
+<pre>
+buffer = keyjson.stringify(['enwiki', 'Hacker News', 1729000]);
+x = keyjson.parse(buffer);
+</pre>
 
-## Building (optional)
+#### b64{en,de}code
+<pre>
+string = keyjson.b64encode(buffer);
+buffer = keyjson.b64decode(sb);
+// sb:
+//      string or buffer.
+//      Padding (the trailing <code>'!'</code>s, if any) is not optional.
+</pre>
+
+#### {stringify,parse}64
+
+<pre>
+keyjson.stringify64(x) == keyjson.b64encode(
+                            keyjson.stringify(x))
+
+keyjson.parse64(sb) == keyjson.parse(
+                            keyjson.b64decode(sb))
+</pre>
+
+## Developing
 
 #### Prereqs
 
