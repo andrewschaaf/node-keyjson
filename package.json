@@ -1,8 +1,16 @@
 {
     "name": "keyjson",
     "main": "keyjson.js",
-    "version": "1.0.0",
+    "version": "1.0.1",
+    
+    "description": "binary JSON encoding with an awesome property: sorted(encoded bytestrings) == sorted(underlying values)",
+    "url": "http://keyjson.org",
     
     "author": "Andrew Schaaf <andrew@andrewschaaf.com>",
-    "contributors": []
+    "contributors": [],
+    
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/andrewschaaf/node-keyjson.git"
+    }
 }
