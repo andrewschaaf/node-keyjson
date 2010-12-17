@@ -5,7 +5,7 @@ import pj.api
 def main():
     
     for name, closureMode in (
-            ('keyjson', 'advanced'),
+            ('keyjson', 'simple'),
             ('test', 'simple')):
         
         with open('src/%s.py' % name, 'rb') as f:
