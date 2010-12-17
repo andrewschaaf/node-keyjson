@@ -269,12 +269,12 @@ def b64decode(s):
 
 #### Convenience
 
-def dumps64(x):
-    return b64encode(dumps(x))
+def stringify64(x):
+    return b64encode(stringify(x))
 
 
-def loads64(buf):
-    return loads(b64decode(buf))
+def parse64(string_or_buf):
+    return parse(b64decode(string_or_buf))
 
 
 #### Exports
@@ -285,6 +285,6 @@ exports['parse'] = parse
 exports['b64encode'] = b64encode
 exports['b64decode'] = b64decode
 
-exports['dumps64'] = dumps64
-exports['loads64'] = loads64
+exports['stringify64'] = stringify64
+exports['parse64'] = parse64
 
