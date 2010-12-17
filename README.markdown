@@ -12,6 +12,8 @@ npm install keyjson
 
 *"Software using Semantic Versioning MUST declare a public API. [...]<br>However it is done, it should be precise and comprehensive."*
 
+*"Version 1.0.0 defines the public API"*
+
 The following plus [keyjson.org](http://keyjson.org) should be precise and comprehensive enough:
 
 <pre>
@@ -26,11 +28,8 @@ x = keyjson.parse(buffer);
 
 #### b64{en,de}code
 <pre>
-string = keyjson.b64encode(buffer);
-buffer = keyjson.b64decode(sb);
-// sb:
-//      string or buffer.
-//      Padding (the trailing <code>'!'</code>s, if any) is not optional.
+string = keyjson.b64encode(buffer_or_array_of_octets);
+buffer = keyjson.b64decode(string_or_buffer); // padding is not optional.
 </pre>
 
 #### {stringify,parse}64

@@ -1,0 +1,8 @@
+{
+    "name": "keyjson",
+    "main": "keyjson.js",
+    "version": "1.0.0",
+    
+    "author": "Andrew Schaaf <andrew@andrewschaaf.com>",
+    "contributors": []
+}
